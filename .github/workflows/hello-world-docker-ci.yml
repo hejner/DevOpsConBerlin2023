@@ -21,4 +21,4 @@ jobs:
           who-to-greet: Hejner
 
       - name: Output time set in the container
-        run: echo "The time was ${{ steps.hello-action.outputs.time }} when the action said hello"
+        run: echo "The time was ${{ steps.hello-messenger.outputs.time }} when the action said hello"
