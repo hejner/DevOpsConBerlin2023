@@ -1,0 +1,17 @@
+name: Reusable workflow
+
+on:
+  workflow_call:
+    inputs:
+      who-to-greet:
+        description: The human to greet
+        type: string
+        required: true
+        default: World
+        
+jobs:
+  reusable_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet someone
+        run: echo "Hello ${{ inputs.who-to-greet }}"
